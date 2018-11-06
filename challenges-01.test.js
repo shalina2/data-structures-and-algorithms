@@ -49,7 +49,11 @@ Return the modified array.
 
 const removeOne = (num, arr) => {
   if(num%3===2){
+
+    arr.pop([])
+
     arr.pop(num)
+
   }
 }
 
