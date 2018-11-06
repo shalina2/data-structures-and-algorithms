@@ -15,9 +15,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  for(var i = 0;i<str.length;i--) {
-    console.log(str.slice(0))
-}
+  for (var i = 0; i < str.length; i++) {
+    // console.log(str.slice(0))
+  }
   return result;
 };
 
@@ -30,7 +30,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  let word =arr.join("");
+  let word = arr.join("");
   console.log(word);
 };
 
@@ -92,7 +92,8 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
- let splitFoods =result.split(/,\s/);
+  let splitFoods = recipe.split(/,\s/);
+  result.push(splitFoods);
   return result;
 }
 
@@ -148,12 +149,12 @@ removeLastCharacters('Gregor', 9) returns ''
 ------------------------------------------------------------------------------------------------ */
 
 const removeLastCharacters = (str, numberOfCharacters) => {
-    if(numberOfCharacters.length > str.length ) {
-        return('');
-    }
-    else if (numberOfCharacters.slice(0,-1)) {
-        return (removeLastCharacters);
-    }
+  if(numberOfCharacters.length > str.length ) {
+    return '';
+  }
+  else if (numberOfCharacters.slice(0,-1)) {
+    return removeLastCharacters;
+  }
 };
 
 
@@ -179,8 +180,8 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-    let vowels = str.splice(vowels);
-    console.log(splice(vowels));
+  let vowels = str.splice(vowels);
+  console.log(str.splice(vowels));
 };
 
 /* ------------------------------------------------------------------------------------------------
